@@ -138,12 +138,12 @@ cython_debug/
 # Streamlit
 .streamlit/
 
-# Model files (too large for git)
-*.h5
-*.hdf5
-*.pkl
-*.pickle
-*.joblib
+# # Model files (too large for git)
+# *.h5
+# *.hdf5
+# *.pkl
+# *.pickle
+# *.joblib
 
 # Dataset files
 *.csv
