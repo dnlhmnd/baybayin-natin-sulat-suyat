@@ -4,10 +4,13 @@ from config.settings import SOCIAL_LINKS, EXTERNAL_LINKS, ASSET_PATHS
 
 def show():
     """Display the home page content"""
-    st.title("Baybayin Natin: Sulat Suyat!")
-    st.subheader("Preserving the Ancient Filipino Script through AI")
+    st.title("**Baybayin Natin: Sulat Suyat!**")
+    st.markdown("Preserving the Ancient Filipino Script through AI")
     
-    st.image(ASSET_PATHS['ss1'], use_container_width=True)
+    # Center the image using columns
+    col1, col2, col3 = st.columns([1, 5, 1])
+    with col2:
+        st.image(ASSET_PATHS['ss1'], use_container_width=True)
     
     _setup_home_sidebar()  # Call sidebar setup
     
@@ -18,7 +21,7 @@ def show():
 
 def _setup_home_sidebar():
     """Setup canvas configuration in sidebar"""
-    st.sidebar.title("Check out my socials!")
+    st.sidebar.title("🌐 Check out my socials!")
     # Social links (horizontal row)
     st.sidebar.markdown(
         f"""
@@ -41,7 +44,7 @@ def _setup_home_sidebar():
     )
     
     st.sidebar.divider()
-    st.sidebar.title("View the code on GitHub!")
+    st.sidebar.title("💻 View the code on GitHub!")
     st.sidebar.markdown(
         "[View Source on GitHub](https://github.com/dnlhmnd/baybayin-natin-sulat-suyat)"
     )
@@ -61,7 +64,7 @@ def _setup_home_sidebar():
 def _show_about_section():
     """Display the about section"""
     st.markdown(f"""
-    ## About Baybayin Natin
+    ## ℹ️ About Baybayin Natin
         
     **Baybayin Natin** is a project born from our college thesis work titled 
     [Baybayin Script Word Recognition and Transliteration Using a Convolutional Neural Network]({EXTERNAL_LINKS['thesis_paper']}). 
@@ -75,12 +78,12 @@ def _show_about_section():
 def _show_usage_guide():
     """Display the usage guide section"""
     st.markdown("""
-    ## How to Use This App
+    ## 🛠️ How to Use This App
         
     1. **Image Upload** - Upload an image of a Baybayin character for classification
     2. **Drawing Canvas** - Draw a Baybayin character and get real-time classification
         
-    ### Navigation Guide:
+    ### 🧭 Navigation Guide:
     - Use the sidebar to switch between different pages
     - Each page has specific instructions for that functionality
     - Reference charts are available on each page to help with character identification
@@ -90,7 +93,7 @@ def _show_usage_guide():
 def _show_technology_section():
     """Display the technology section"""
     st.markdown("""
-    ## About the Technology
+    ## 🤖 About the Technology
         
     This app uses a **Convolutional Neural Network (CNN)** trained on thousands of Baybayin character samples. 
     The model can recognize 59 different Baybayin characters and character combinations with high accuracy.
@@ -106,5 +109,5 @@ def _show_technology_section():
 
 def _show_reference_chart():
     """Display the collapsible reference chart"""
-    with st.expander("Baybayin Character Reference Chart", expanded=False):
+    with st.expander("📖 Baybayin Character Reference Chart", expanded=False):
         st.image(ASSET_PATHS['preprocessing'], use_container_width=True)
