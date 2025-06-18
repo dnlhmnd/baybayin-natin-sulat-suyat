@@ -17,7 +17,8 @@ SOCIAL_LINKS = {
 # Page configuration
 PAGE_CONFIG = {
     "page_title": "Baybayin Natin: Sulat Suyat!",
-    "layout": "wide"
+    "layout": "wide",
+    "initial_sidebar_state ": "expanded",
 }
 
 # Model configuration
