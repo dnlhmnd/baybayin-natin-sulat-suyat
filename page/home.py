@@ -1,5 +1,5 @@
 import streamlit as st
-from config.settings import EXTERNAL_LINKS, ASSET_PATHS
+from config.settings import SOCIAL_LINKS, EXTERNAL_LINKS, ASSET_PATHS
 
 
 def show():
@@ -21,18 +21,18 @@ def _setup_home_sidebar():
     st.sidebar.title("Check out my socials!")
     # Social links (horizontal row)
     st.sidebar.markdown(
-        """
+        f"""
         <div style="display: flex; gap: 8px;">
-            <a href="https://www.linkedin.com/in/danielshawnhammond/" target="_blank">
+            <a href={SOCIAL_LINKS['linkedin']} target="_blank">
                 <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn">
             </a>
-            <a href="https://github.com/dnlhmnd" target="_blank">
+            <a href={SOCIAL_LINKS['github']} target="_blank">
                 <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white" alt="GitHub">
             </a>
-            <a href="https://www.kaggle.com/danielhammond" target="_blank">
+            <a href={SOCIAL_LINKS['kaggle']} target="_blank">
                 <img src="https://img.shields.io/badge/Kaggle-20BEFF?style=flat&logo=kaggle&logoColor=white" alt="Kaggle">
             </a>
-            <a href="https://dev.to/dnlhmnd" target="_blank">
+            <a href={SOCIAL_LINKS['dev']} target="_blank">
                 <img src="https://img.shields.io/badge/DEV.to-0A0A0A?style=flat&logo=devdotto&logoColor=white" alt="DEV.to">
             </a>
         </div>
