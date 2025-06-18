@@ -43,7 +43,7 @@ def _setup_home_sidebar():
     st.sidebar.divider()
     st.sidebar.title("View the code on GitHub!")
     st.sidebar.markdown(
-        "[View Source on GitHub](https://github.com/dshammond/baybayin-natin-sulat-suyat)"
+        "[View Source on GitHub](https://github.com/dnlhmnd/baybayin-natin-sulat-suyat)"
     )
 
     st.sidebar.divider()
